@@ -1,0 +1,12 @@
+Package: h6
+Version: 0.2-1
+Date: 2015-01-27
+Title: Advanced R programming, homework 6
+Authors@R: c(person("Karol", "Kubicki",role = c("aut", "cre"),email = "kontokarlosa@yahoo.pl"))
+Depends: R(>= 3.1.2), Rcpp
+Description: This package is a solution of homework 6 of R Advanced Programming course. It consists of three functions: mode, simplify2array2 and perms. More about the course: https://courses.ipipan.edu.pl/simple.php?page=syllabus018.html.
+License: GPL(>=2)
+URL: http://github.com/langusta/h6
+BugReports: http://github.com/langusta/h6
+LinkingTo: Rcpp
+Imports: Rcpp

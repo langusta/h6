@@ -1,0 +1,7 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^\.gitignore$
+^\.git
+^README\.md$
+^testy\.R$
+^wzor\.cpp$
