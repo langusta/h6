@@ -1,6 +1,6 @@
 <!--
 %\VignetteEngine{knitr::knitr}
-%\VignetteIndexEntry{An Introduction to the h6 package}
+%\VignetteIndexEntry{Benchmarks of functions from h6 package}
 -->
 
   Benchmarks for functions from **h6** package
