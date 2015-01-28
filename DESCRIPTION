@@ -1,6 +1,6 @@
 Package: h6
-Version: 0.2-1
-Date: 2015-01-27
+Version: 0.8-1
+Date: 2015-01-28
 Title: Advanced R programming, homework 6
 Authors@R: c(person("Karol", "Kubicki",role = c("aut", "cre"),email = "kontokarlosa@yahoo.pl"))
 Depends: R(>= 3.1.2), Rcpp
@@ -10,4 +10,5 @@ URL: http://github.com/langusta/h6
 BugReports: http://github.com/langusta/h6
 LinkingTo: Rcpp
 Imports: Rcpp
-Suggests: testthat
+Suggests: testthat, knitr
+VignetteBuilder: knitr
