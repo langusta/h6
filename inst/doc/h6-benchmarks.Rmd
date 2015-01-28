@@ -1,0 +1,62 @@
+<!--
+%\VignetteEngine{knitr::knitr}
+%\VignetteIndexEntry{An Introduction to the h6 package}
+-->
+
+  Benchmarks for functions from **h6** package
+=======================================
+
+```{r, include=FALSE}
+library(h6)
+library(microbenchmark)
+```
+
+
+Mode
+------------
+
+Another approach to computing mode:
+```{r}
+mode2 <- function(x) {
+  ux <- unique(x)
+  ux[which.max(tabulate(match(x, ux)))]
+}
+```
+
+Comparing performance on three different input sizes:
+
+```{r, cache=TRUE}
+microbenchmark(mode(c(1:10000,5)), mode2(c(1:10000,5)))
+microbenchmark(mode(c(1:100000,5)), mode2(c(1:100000,5)))
+microbenchmark(mode(c(1:1000000,5)), mode2(c(1:1000000,5)))
+```
+The longest input vector shows significant difference in their performance in favor of our *mode*.
+
+Simplify2array2:
+----------------------------
+We will compare *simplify2array2* with base *simplify2array* function.
+```{r, cache=TRUE}
+microbenchmark(simplify2array2(list(1:100000,1:100000)), simplify2array(list(1:100000,1:100000)))
+microbenchmark(simplify2array2(list(1:1000000,1:1000000)), simplify2array(list(1:1000000,1:1000000)))
+```
+
+Let's see how they perform on input that cannot be turned into an array.
+
+```{r, cache=TRUE}
+microbenchmark(simplify2array2(list(rep("a",1000000),1:1000000)), simplify2array(list(rep("a",1000000),1:1000000)))
+```
+
+Our implementation is significantly faster than base one.
+
+Perms:
+-----------------------------
+
+We will compare our *perms* function to *permutations* from *gtools* package.
+```{r, cache=TRUE}
+library(gtools)
+microbenchmark(perms(5), permutations(5,5,1:5))
+microbenchmark(perms(6), permutations(6,6,1:6))
+microbenchmark(perms(7), permutations(7,7,1:7))
+```
+
+*Perms* clearly outperforms *permutations*.

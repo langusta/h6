@@ -1,0 +1,38 @@
+<!--
+%\VignetteEngine{knitr::knitr}
+%\VignetteIndexEntry{An Introduction to the h6 package}
+-->
+   
+   An Introduction to **h6** package
+=======================================
+   
+```{r, include=FALSE}
+library(h6)
+```
+
+
+Introduction
+------------
+   
+   
+   The  **h6** package is a solution of homework 6 of R Advanced Programming course. It consists of three functions: mode, simplify2array2 and perms. More about the course: https://courses.ipipan.edu.pl/simple.php?page=syllabus018.html.
+
+
+
+Functions:
+----------------------------
+   There are three functions included in the package:
+
+- mode - returns most frequent value from given integer vector,
+- perms - computes all permutations of the set {1,2,...,n} for any given n,
+- simplify2array2 - simplifies a list into an array (if possible).
+
+Examples
+-----------------------------
+
+```{r}
+mode(c(1,2,3,1,4,5,1,2,6,1))
+perms(4)
+simplify2array2(list(1:2,2:3,3:4))
+simplify2array2(list(1:2,2:3,3))
+```
