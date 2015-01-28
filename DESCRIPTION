@@ -10,5 +10,5 @@ URL: http://github.com/langusta/h6
 BugReports: http://github.com/langusta/h6
 LinkingTo: Rcpp
 Imports: Rcpp
-Suggests: testthat, knitr
+Suggests: testthat, knitr, microbenchmark
 VignetteBuilder: knitr
